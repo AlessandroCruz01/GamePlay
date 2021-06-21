@@ -8,6 +8,7 @@ import {
     StatusBar
 } from 'react-native'
 
+import { ButtonIcon } from "../../components/Buttonicon";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
 
@@ -42,7 +43,9 @@ export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos 
                     favoritos com seus amigos {'\n'}
                 </Text>
 
-
+                <ButtonIcon
+                    title={'Entrar com Discord'}
+                />
 
             </View>
 
