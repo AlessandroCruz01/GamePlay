@@ -9,10 +9,18 @@ import {
 import { ButtonIcon } from "../../components/Buttonicon";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from './styles'
+import { useNavigation } from "@react-navigation/native";
+
+
 
 export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos importar por chaves!
     // Criando um estado!
     // const [text, setText] = useState('Alessandro'); //passamos [nomeDoEstado, funcaoQueAtualizaEsseEstado] = useState(<valorInicial>)
+    const navigation = useNavigation()
+
+    function handleSignIn() {
+        navigation.navigate('Home')
+    }
 
     return (
         <View style={styles.container}>
@@ -38,6 +46,7 @@ export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos 
 
                 <ButtonIcon
                     title={'Entrar com Discord'}
+                    onPress={handleSignIn}
                 />
 
             </View>
