@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import {
     View,
     Text,
-    TextInput,
-    Image,
-    StatusBar
+    Image
 } from 'react-native'
 
 import { ButtonIcon } from "../../components/Buttonicon";
@@ -19,11 +17,6 @@ export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos 
     return (
         <View style={styles.container}>
 
-            <StatusBar
-                barStyle="light-content"
-                backgroundColor="transparent"
-                translucent
-            />
 
             <Image
                 source={IllustrationImg}
@@ -35,7 +28,7 @@ export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos 
                 <Text style={styles.title}>
                     Conecte-se {'\n'}
                     e organize suas {'\n'}
-                    jogatinas {'\n'}
+                    jogatinas
                 </Text>
 
                 <Text style={styles.subtitle}>
