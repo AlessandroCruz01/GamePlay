@@ -11,7 +11,10 @@ import CalendarSvg from '../../assets/calendar.svg'
 import { theme } from "../../global/styles/theme";
 
 export type GuildProps = {
-    owner: true
+    id: string,
+    name: string,
+    icon: null,
+    owner: boolean
 }
 
 export type AppointmentsProps = {
@@ -71,7 +74,7 @@ export function Appointments({ data, ...rest }: Props) {
                             <PlayerSvg fill={!owner ? primary : on} />
 
                             <Text style={[
-                                styles.players, { color: owner ? primary : on }
+                                styles.player, { color: owner ? primary : on }
                             ]}>
 
                                 {owner ? 'Anfritrião' : 'Visitante'}

@@ -41,6 +41,25 @@ export const styles = StyleSheet.create({
     dateInfo: {
         flexDirection: 'row',
         alignItems: 'center'
+    },
+
+    playersInfo: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+    date: {
+        fontFamily: theme.fonts.text500,
+        color: theme.colors.heading,
+        fontSize: 13,
+        marginLeft: 7
+    },
+
+    player: {
+        fontFamily: theme.fonts.text500,
+        fontSize: 13,
+        marginLeft: 7,
+        marginRight: 24
     }
 
 })
