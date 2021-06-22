@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         flex: 1, //Por padrao o react native usa flex box para posicionamento de elementos
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.colors.secondary100
     },
 
     image: {
