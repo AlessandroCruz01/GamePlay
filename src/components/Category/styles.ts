@@ -24,7 +24,8 @@ export const styles = StyleSheet.create({
     title: {
         fontFamily: theme.fonts.title700,
         color: theme.colors.heading,
-        fontSize: 15
+        fontSize: 15,
+        marginTop: 15
     },
 
     check: {
@@ -38,7 +39,7 @@ export const styles = StyleSheet.create({
         // marginRight: 7,
         borderColor: theme.colors.secondary50,
         borderWidth: 2,
-        borderRadius: 3
+        borderRadius: 3,
     },
 
     checked: {
