@@ -4,7 +4,8 @@ import {
     View,
     ScrollView,
     KeyboardAvoidingView,
-    Platform
+    Platform,
+    Modal
 } from "react-native";
 import { RectButton } from 'react-native-gesture-handler'
 import { Feather } from "@expo/vector-icons";
@@ -13,18 +14,31 @@ import { styles } from './styles'
 
 import { theme } from "../../global/styles/theme";
 
-import { Background } from '../../components/Background'
+import { ModalView } from '../../components/ModalView'
 import { Header } from "../../components/Header";
 import { CategorySelect } from "../../components/CategorySelect";
 import { SmallInput } from "../../components/SmallInput";
 import { TextArea } from "../../components/TextArea";
 import { GuildIcon } from "../../components/GuildIcon";
 import { Button } from "../../components/Button";
+import { Guilds } from "../Guilds";
+import { GuildProps } from "../../components/Guild";
 
 
 
 export function AppoitmentCreate() {
     const [category, setCategory] = useState('')
+    const [openGuildsModal, setOpenGuildsModal] = useState(false)
+    const [guild, setGuild] = useState<GuildProps>({} as GuildProps)
+
+    function handleOpenGuilds() {
+        setOpenGuildsModal(true)
+    }
+
+    function handleOpenGuildSelect(guildSelect: GuildProps) {
+        setGuild(guildSelect)
+        setOpenGuildsModal(false)
+    }
 
     return (
         <KeyboardAvoidingView
@@ -47,18 +61,20 @@ export function AppoitmentCreate() {
                 />
 
                 <View style={styles.form}>
-                    <RectButton>
+                    <RectButton onPress={handleOpenGuilds}>
 
                         <View style={styles.select}>
 
 
-                            {/* <View style={styles.image} /> */}
-                            <GuildIcon />
+                            {
+                                guild.icon ? <GuildIcon /> : <View style={styles.image} />
+
+                            }
 
                             <View style={styles.selectBody}>
                                 <Text style={styles.label}>
 
-                                    Selecione Um servidor
+                                    {guild.name ? guild.name : 'Selecione Um servidor'}
 
                                 </Text>
                             </View>
@@ -128,6 +144,10 @@ export function AppoitmentCreate() {
                 </View>
 
             </ScrollView>
+
+            <ModalView visible={openGuildsModal}>
+                <Guilds handleGuildSelect={handleOpenGuildSelect} />
+            </ModalView>
         </KeyboardAvoidingView>
     )
 
