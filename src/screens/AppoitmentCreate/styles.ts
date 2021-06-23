@@ -1,4 +1,5 @@
 import { StyleSheet } from "react-native";
+import { ceil } from "react-native-reanimated";
 import { theme } from "../../global/styles/theme";
 
 export const styles = StyleSheet.create({
@@ -40,5 +41,25 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.secondary50,
         borderWidth: 1,
         borderRadius: 8
+    },
+
+    field: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 30
+    },
+
+    column: {
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+
+    divider: {
+        marginRight: 4,
+        fontSize: 15,
+        fontFamily: theme.fonts.text500,
+        color: theme.colors.highlight,
+        textAlign: 'center'
     }
 })
