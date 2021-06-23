@@ -8,6 +8,7 @@ import { SignIn } from '../screens/Signin'
 import { AppoitmentDetails } from '../screens/AppoitmentDetails'
 
 import { theme } from '../global/styles/theme'
+import { AppoitmentCreate } from '../screens/AppoitmentCreate'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -36,6 +37,14 @@ export function AuthRouts() {
                 name="AppoitmentDetails"
                 component={AppoitmentDetails}
             />
+
+
+            <Screen
+                name="AppoitmentCreate"
+                component={AppoitmentCreate}
+            />
+
+
         </Navigator>
     )
 }

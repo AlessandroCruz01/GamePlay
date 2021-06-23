@@ -56,13 +56,17 @@ export function Home() {
         navigation.navigate('AppoitmentDetails')
     }
 
+    function handleAppoitmentCreate() {
+        navigation.navigate('AppoitmentCreate')
+    }
+
     return (
 
         <Background>
             <View>
                 <View style={styles.header}>
                     <Profile />
-                    <ButtonAdd />
+                    <ButtonAdd onPress={handleAppoitmentCreate} />
                 </View>
 
 
