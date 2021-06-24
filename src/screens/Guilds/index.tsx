@@ -28,34 +28,6 @@ export function Guilds({ handleGuildSelect }: Props) {
             owner: true
         },
 
-        {
-            id: '3',
-            name: 'Lendarios',
-            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
-            owner: true
-        },
-
-        {
-            id: '4',
-            name: 'Galera',
-            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
-            owner: true
-        },
-        {
-            id: '5',
-            name: 'Lendarios',
-            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
-            owner: true
-        },
-
-        {
-            id: '6',
-            name: 'Galera',
-            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
-            owner: true
-        },
-
-
     ]
 
     return (

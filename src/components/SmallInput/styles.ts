@@ -8,7 +8,13 @@ export const styles = StyleSheet.create({
         backgroundColor: theme.colors.secondary40,
         borderRadius: 8,
         color: theme.colors.heading,
-        marginRight: 3
+        fontFamily: theme.fonts.title700,
+        fontSize: 20,
+        marginRight: 3,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: theme.colors.secondary50,
+
     },
 
 })
