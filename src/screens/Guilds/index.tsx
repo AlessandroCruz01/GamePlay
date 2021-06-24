@@ -26,7 +26,36 @@ export function Guilds({ handleGuildSelect }: Props) {
             name: 'Galera',
             icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
             owner: true
-        }
+        },
+
+        {
+            id: '3',
+            name: 'Lendarios',
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
+            owner: true
+        },
+
+        {
+            id: '4',
+            name: 'Galera',
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
+            owner: true
+        },
+        {
+            id: '5',
+            name: 'Lendarios',
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
+            owner: true
+        },
+
+        {
+            id: '6',
+            name: 'Galera',
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
+            owner: true
+        },
+
+
     ]
 
     return (
@@ -41,7 +70,12 @@ export function Guilds({ handleGuildSelect }: Props) {
                     />
                 )}
                 showsHorizontalScrollIndicator={false}
-                ItemSeparatorComponent={() => <ListDivider />}
+                ItemSeparatorComponent={() => <ListDivider isCentered />}
+                contentContainerStyle={{
+                    paddingBottom: 35,
+                    paddingTop: 103
+                }}
+                ListHeaderComponent={() => <ListDivider isCentered />}
                 style={styles.guilds}
             />
         </View>
