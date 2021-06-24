@@ -35,6 +35,11 @@ export function AppoitmentCreate() {
         setOpenGuildsModal(true)
     }
 
+    function handleCloseGuilds() {
+        setOpenGuildsModal(true)
+    }
+
+
     function handleOpenGuildSelect(guildSelect: GuildProps) {
         setGuild(guildSelect)
         setOpenGuildsModal(false)
@@ -145,7 +150,7 @@ export function AppoitmentCreate() {
 
             </ScrollView>
 
-            <ModalView visible={openGuildsModal}>
+            <ModalView visible={openGuildsModal} closeModal={handleCloseGuilds}>
                 <Guilds handleGuildSelect={handleOpenGuildSelect} />
             </ModalView>
         </KeyboardAvoidingView>
