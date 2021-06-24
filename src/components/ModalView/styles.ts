@@ -3,7 +3,7 @@ import { theme } from "../../global/styles/theme"
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 100
+        marginTop: 100,
     },
 
     overlay: {
@@ -16,6 +16,8 @@ export const styles = StyleSheet.create({
         height: 2,
         borderRadius: 2,
         backgroundColor: theme.colors.secondary30,
-        marginTop: 13
+        alignSelf: 'center',
+        marginTop: 13,
+        marginBottom: 103
     }
 })

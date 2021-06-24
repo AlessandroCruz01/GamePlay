@@ -17,7 +17,14 @@ export function Guilds({ handleGuildSelect }: Props) {
         {
             id: '1',
             name: 'Lendarios',
-            icon: null,
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
+            owner: true
+        },
+
+        {
+            id: '2',
+            name: 'Galera',
+            icon: 'https://logodownload.org/wp-content/uploads/2017/11/discord-logo-5-1.png',
             owner: true
         }
     ]
