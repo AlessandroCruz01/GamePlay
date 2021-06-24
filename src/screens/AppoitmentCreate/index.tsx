@@ -36,7 +36,7 @@ export function AppoitmentCreate() {
     }
 
     function handleCloseGuilds() {
-        setOpenGuildsModal(true)
+        setOpenGuildsModal(false)
     }
 
 
