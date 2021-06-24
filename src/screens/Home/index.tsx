@@ -45,7 +45,8 @@ export function Home() {
             category: '1',
             date: '22/06 ás 20:40h',
             description: 'É hoje que vamos chegar ao challenger sem perder uma partida da md10'
-        }
+        },
+
     ]
 
     function handleCategorySelect(categoryId: string) {
@@ -63,43 +64,42 @@ export function Home() {
     return (
 
         <Background>
-            <View>
-                <View style={styles.header}>
-                    <Profile />
-                    <ButtonAdd onPress={handleAppoitmentCreate} />
-                </View>
 
-
-                <CategorySelect
-                    categorySelected={category}
-                    setCategory={handleCategorySelect}
-                    hasCheckBox={false}
-                />
-
-                <View style={styles.content}>
-
-                    <ListHeader
-                        title="Partidas Agendadas"
-                        subtitle="Total 6"
-                    />
-
-                    <FlatList
-                        data={appointments}
-                        keyExtractor={item => item.id}
-                        renderItem={({ item }) => (
-                            <Appointments
-                                data={item}
-                                onPress={handleAppoitmentDetails}
-                            />
-
-                        )}
-                        ItemSeparatorComponent={() => <ListDivider />} //divisor de lista
-                        style={styles.matches}
-                        showsVerticalScrollIndicator={false}
-                    />
-
-                </View>
+            <View style={styles.header}>
+                <Profile />
+                <ButtonAdd onPress={handleAppoitmentCreate} />
             </View>
+
+
+            <CategorySelect
+                categorySelected={category}
+                setCategory={handleCategorySelect}
+                hasCheckBox={false}
+            />
+
+
+            <ListHeader
+                title="Partidas Agendadas"
+                subtitle="Total 6"
+            />
+
+
+            <FlatList
+                data={appointments}
+                keyExtractor={item => item.id}
+                renderItem={({ item }) => (
+                    <Appointments
+                        data={item}
+                        onPress={handleAppoitmentDetails}
+                    />
+
+                )}
+                ItemSeparatorComponent={() => <ListDivider />} //divisor de lista
+                contentContainerStyle={{ paddingBottom: 39 }}
+                style={styles.matches}
+                showsVerticalScrollIndicator={false}
+            />
+
         </Background>
     )
 }
