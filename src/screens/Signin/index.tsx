@@ -12,12 +12,16 @@ import { styles } from './styles'
 import { useNavigation } from "@react-navigation/native";
 import { Background } from '../../components/Background'
 
+//Usando a autenticacao, hooks
+import { useAuth } from "../../hooks/auth";
+
 
 
 export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos importar por chaves!
     // Criando um estado!
     // const [text, setText] = useState('Alessandro'); //passamos [nomeDoEstado, funcaoQueAtualizaEsseEstado] = useState(<valorInicial>)
     const navigation = useNavigation()
+    const { user } = useAuth()
 
     function handleSignIn() {
         navigation.navigate('Home')
