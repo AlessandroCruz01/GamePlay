@@ -25,7 +25,7 @@ export function SignIn() { //Neste caso nao usamos o defaut, pois quando formos 
         try {
             await signIn()
         } catch (error) {
-            Alert.alert(error)
+            console.log(error)
         }
     }
 
