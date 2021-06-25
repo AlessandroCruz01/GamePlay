@@ -12,7 +12,7 @@ import { AppoitmentCreate } from '../screens/AppoitmentCreate'
 
 const { Navigator, Screen } = createStackNavigator()
 
-export function AuthRouts() {
+export function AppRouts() {
     return (
         <Navigator
             headerMode='none'
