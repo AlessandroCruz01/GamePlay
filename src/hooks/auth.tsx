@@ -95,7 +95,7 @@ function AuthProvider({ children }: AuthProviderProps) {
     }
 
     useEffect(() => {
-        loadUserStorageData()
+        loadUserStorageData() //Esta funcao que busca no storage local os dados do usuario autenticado!
     })
 
     return (
