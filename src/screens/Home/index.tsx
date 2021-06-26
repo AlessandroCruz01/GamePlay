@@ -60,14 +60,13 @@ export function Home() {
 
             <View style={styles.header}>
                 <Profile />
-                <ButtonAdd onPress={() => handleAppoitmentCreate} />
+                <ButtonAdd onPress={(handleAppoitmentCreate)} />
             </View>
 
 
             <CategorySelect
                 categorySelected={category}
                 setCategory={handleCategorySelect}
-                hasCheckBox={false}
             />
 
             {

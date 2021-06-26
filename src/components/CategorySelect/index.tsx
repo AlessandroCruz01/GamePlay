@@ -10,7 +10,7 @@ import { Category } from "../Category";
 type Props = {
     categorySelected: string;
     setCategory: (categoryId: string) => void; //Em outras palavras, por parametro as propriedades de CategorySelected, temos uma striong com o nome da categoria e uma funcao que recebe o id de uma categoria mas n retorna nada
-    hasCheckBox: boolean,
+    hasCheckBox?: boolean,
 }
 
 export function CategorySelect({
