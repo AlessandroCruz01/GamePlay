@@ -7,15 +7,6 @@ import React, {
 
 import * as AuthSession from 'expo-auth-session'
 import { api } from "../services/api";
-// import AsyncStorage from '@react-native-async-storage/async-storage';
-
-// import {
-//     SCOPE,
-//     CLIENT_ID,
-//     CDN_IMAGE,
-//     REDIRECT_URI,
-//     RESPONSE_TYPE,
-// } from '../config'
 
 const { REDIRECT_URI } = process.env;
 const { SCOPE } = process.env;
@@ -63,7 +54,7 @@ function AuthProvider({ children }: AuthProviderProps) {
             //Houve um erro ao receber a url pelo authUrl, entao usei Replaces para fazer a correção
 
             const authUrl = `${api.defaults.baseURL}/oauth2/authorize?client_id=${CLIENT_ID?.replace(';', '')}&redirect_uri=${REDIRECT_URI?.replace(';', '')}&response_type=${RESPONSE_TYPE?.replace(';', '')}&scope=${SCOPE?.replace(';', '')}`
-            console.log(authUrl)
+            // console.log(authUrl)
             const { type, params } = await AuthSession.startAsync({ authUrl }) as AuthorizationResponse
 
             if (type === 'success' && !params.error) {
