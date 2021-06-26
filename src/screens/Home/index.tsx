@@ -28,8 +28,8 @@ export function Home() {
         categoryId === category ? setCategory('') : setCategory(categoryId)  //Ternario para testar, categoryId é true? ou seja , o icone esta selecionado? se sim desmarca, se nao marca com o id da opcao selecionada
     }
 
-    function handleAppoitmentDetails() {
-        navigation.navigate('AppoitmentDetails')
+    function handleAppoitmentDetails(guildSelected: AppointmentsProps) {
+        navigation.navigate('AppoitmentDetails', { guildSelected })
     }
 
     function handleAppoitmentCreate() {
@@ -60,7 +60,7 @@ export function Home() {
 
             <View style={styles.header}>
                 <Profile />
-                <ButtonAdd onPress={handleAppoitmentCreate} />
+                <ButtonAdd onPress={() => handleAppoitmentCreate} />
             </View>
 
 
@@ -85,7 +85,7 @@ export function Home() {
                             renderItem={({ item }) => (
                                 <Appointments
                                     data={item}
-                                    onPress={handleAppoitmentDetails}
+                                    onPress={() => handleAppoitmentDetails(item)}
                                 />
 
                             )}
